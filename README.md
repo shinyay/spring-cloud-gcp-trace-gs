@@ -1,6 +1,6 @@
 # Spring Cloud GCP for Cloud Trace Getting Started
 
-Overview
+Cloud Trace is a distributed tracing system for Google Cloud that collects latency data from applications and displays it in near real-time in the Google Cloud Console.
 
 ## Description
 
