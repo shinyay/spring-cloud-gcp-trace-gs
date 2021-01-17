@@ -7,7 +7,10 @@ Cloud Trace is a distributed tracing system for Google Cloud that collects laten
 - com.google.cloud
   - `spring-cloud-gcp-starter-trace`
 
+### Traceability Terminology
+![trace-span](https://user-images.githubusercontent.com/3072734/104860246-cb2d8f00-596d-11eb-81aa-9085bc1525d1.jpg)
 ## Demo
+
 
 ## Features
 
