@@ -1,6 +1,7 @@
 package com.google.shinyay.controller
 
 import com.google.shinyay.logger
+import com.google.shinyay.service.HelloService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -10,13 +11,8 @@ import java.time.format.DateTimeFormatter
 
 @RestController
 @RequestMapping("/api/v1")
-class HelloController {
+class HelloController(val service: HelloService) {
 
     @GetMapping("/hello")
-    fun hello(): String {
-        val dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
-        val currentTime = ZonedDateTime.now(ZoneId.of("Japan")).format(dateFormat)
-        logger.info("Current Time: $currentTime")
-        return "Hello at $currentTime"
-    }
+    fun hello(): String = service.hello()
 }
