@@ -9,6 +9,11 @@ Cloud Trace is a distributed tracing system for Google Cloud that collects laten
 
 ### Traceability Terminology
 ![trace-span](https://user-images.githubusercontent.com/3072734/104860246-cb2d8f00-596d-11eb-81aa-9085bc1525d1.jpg)
+
+- **Trace**
+  - Single Request or Job that is triggered in an application
+    - **Trace ID** is generated when the first request is made
+    
 ## Demo
 
 
