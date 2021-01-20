@@ -1,10 +1,12 @@
 package com.google.shinyay.service
 
 import com.google.shinyay.logger
+import kotlinx.coroutines.delay
 import org.springframework.stereotype.Service
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import kotlin.random.Random
 
 @Service
 class HelloService {
@@ -14,5 +16,11 @@ class HelloService {
         val currentTime = ZonedDateTime.now(ZoneId.of("Japan")).format(dateFormat)
         logger.info("Current Time: $currentTime")
         return "Hello at $currentTime"
+    }
+
+    suspend fun blockFunction() {
+        val randomValue = Random.nextLong(1000, 2000)
+        delay(randomValue)
+        logger.info("Delay: $randomValue")
     }
 }
