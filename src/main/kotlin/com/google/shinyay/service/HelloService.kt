@@ -19,6 +19,8 @@ class HelloService {
     }
 
     suspend fun blockFunction() {
+        logger.info("Current Time: ${ZonedDateTime.now(ZoneId.of("Japan"))
+                .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS))}"))}")
         val randomValue = Random.nextLong(1000, 2000)
         delay(randomValue)
         logger.info("Delay: $randomValue")
