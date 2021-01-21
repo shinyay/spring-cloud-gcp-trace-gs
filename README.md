@@ -19,6 +19,7 @@ Cloud Trace is a distributed tracing system for Google Cloud that collects laten
   - Span is each individual hop along the way, each request
   - Single trace can be composed of multiple spans each correlating to a specific step or section of the request
     - **Span ID** is assigned for that component and added to the trace
+
 ## Demo
 ### Setup Cloud Trace
 #### Enable Cloud Trace API
@@ -26,6 +27,8 @@ Cloud Trace is a distributed tracing system for Google Cloud that collects laten
 $ gcloud services enable cloudtrace.googleapis.com
 ```
 
+### Cloud Trace
+![cloud-trace](https://user-images.githubusercontent.com/3072734/105344401-373a1c80-5c26-11eb-82e9-8e60d949fdcf.png)
 
 ## Features
 
